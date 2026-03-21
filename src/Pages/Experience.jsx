@@ -1,39 +1,122 @@
-import React from "react";
+import React, { useEffect } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Experience = () => {
+  const experiences = [
+    {
+      role: "Full Stack Developer",
+      company: "Freelance / Self-employed",
+      duration: "2023 - Present",
+      desc: "Building scalable MERN stack applications, optimizing performance, and delivering production-ready solutions.",
+    },
+    {
+      role: "Frontend Developer",
+      company: "Client Projects",
+      duration: "2022 - 2023",
+      desc: "Developed responsive UI, improved UX, and integrated APIs using React and modern tools.",
+    },
+  ];
+
+  //GSAP Reveal
+  useEffect(() => {
+    const elements = gsap.utils.toArray(".reveal");
+
+    elements.forEach((el) => {
+      gsap.fromTo(
+        el,
+        { y: 80, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 1,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: el,
+            start: "top 85%",
+          },
+        }
+      );
+    });
+  }, []);
+
   return (
-    <section
-      
-      className="min-h-full bg-black flex items-center px-6 sm:px-12 lg:px-24"
-    >
-      <header className="w-full max-w-7xl mx-auto flex flex-col md:flex-row items-center md:items-start justify-between gap-10">
-        {/* Left side - heading */}
-        <div className="flex flex-col justify-center gap-6 md:gap-12 md:flex-[1]">
-          <p className="tracking-[0.5rem] uppercase text-white text-sm font-light mb-2">
-            Professional Journey
-          </p>
+    <section className="min-h-screen bg-black text-white px-6 sm:px-12 lg:px-24 py-20" style={{ borderRadius: "45px" }}>
+      <div className="max-w-7xl mx-auto flex flex-col gap-20">
 
-          <h1
-            className="uppercase font-normal banner-text-responsive text-[4rem] sm:text-[5rem] md:text-[7rem] leading-tight text-white"
-            aria-label="Experience"
-          >
-            Experience
-          </h1>
-        </div>
- 
-        {/* Right side - description */}
-        <div className="relative md:flex-[1] px-3 max-w-xl">
-          <div className="absolute inset-x-0 top-0 border-t-2 border-white"></div>
+        {/* HEADER */}
+        <div className="flex flex-col md:flex-row justify-between gap-10">
 
-          <div className="pt-12 sm:pt-16 text-white uppercase font-light space-y-4 text-right text-lg sm:text-xl">
-            <p className="tracking-wide">
-              Full Stack Developer with hands-on experience
+          {/* Left */}
+          <div className="flex flex-col gap-6 md:gap-12">
+            <p className="tracking-[0.5rem] uppercase text-sm font-light reveal">
+              Professional Journey
             </p>
-            <p className="tracking-wide">in modern web technologies and</p>
-            <p className="tracking-wide">agile development practices.</p>
+
+            <h1 className="uppercase text-[4rem] sm:text-[5rem] md:text-[7rem] leading-tight reveal">
+              Experience
+            </h1>
+          </div>
+
+          {/* Right */}
+          <div className="relative max-w-xl">
+            <div className="absolute inset-x-0 top-0 border-t border-white"></div>
+
+            <div className="pt-12 text-right uppercase font-light space-y-3 text-lg">
+              <p className="reveal">
+                Full Stack Developer with hands-on experience
+              </p>
+              <p className="reveal">
+                in modern web technologies and
+              </p>
+              <p className="reveal">
+                agile development practices..
+              </p>
+            </div>
           </div>
         </div>
-      </header>
+
+        {/* TIMELINE */}
+        <div className="relative flex flex-col gap-12">
+
+          {/* Vertical Line */}
+          <div className="absolute left-2 top-0 bottom-0 w-[1px] bg-white/20"></div>
+
+          {experiences.map((exp, index) => (
+            <div
+              key={index}
+              className="relative pl-10 group reveal"
+            >
+              {/* Dot */}
+              <div className="absolute left-0 top-2 w-3 h-3 bg-white rounded-full group-hover:scale-125 transition"></div>
+
+              {/* Card */}
+              <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-xl p-6 transition hover:bg-white/10">
+
+                <div className="flex justify-between flex-wrap gap-2 mb-2">
+                  <h3 className="text-xl font-medium">
+                    {exp.role}
+                  </h3>
+                  <span className="text-sm text-white/60">
+                    {exp.duration}
+                  </span>
+                </div>
+
+                <p className="text-sm text-white/70 mb-2">
+                  {exp.company}
+                </p>
+
+                <p className="text-white/80 leading-relaxed">
+                  {exp.desc}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+      </div>
     </section>
   );
 };
