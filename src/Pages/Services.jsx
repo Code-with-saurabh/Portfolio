@@ -49,7 +49,7 @@ const Services = () => {
   return (
     <section
       ref={sectionRef}
-      className="text-[7rem] h-[80vh] mt-40 overflow-hidden font-light leading-snug text-center mb-1"
+      className="text-[5rem] h-[80vh] mt-40 overflow-hidden font-light leading-snug text-center mb-1"
     >
       <div id="title-service-1">
         <p>Architecture</p>

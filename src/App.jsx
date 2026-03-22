@@ -8,6 +8,9 @@ import Experience from "./Pages/Experience";
 import Hero from "./Pages/Hero";
 import Services from "./Pages/Services";
 import Works from "./Pages/Works";
+import Resume from "./Pages/Resume";
+import Lets from "./Pages/Lets";
+import Contact from "./Pages/Contact";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -66,7 +69,7 @@ const App = () => {
 
   return (
     <SmoothScroll>
-      <div className="main bg-[#d6d6d6] h-full">
+      <div className="main bg-[#d6d6d6] min-h-[200vh]">
         <Hero />
 
         <Services />
@@ -88,6 +91,26 @@ const App = () => {
         </div>
 
         <Works />
+
+        <div
+          ref={sectionRef}
+          style={{ lineHeight: 0, borderRadius: "45px" }}
+          className=" Resume bg-black next-line-section-saurabh h-[80vh] origin-center will-change-transform mt-[20px] mb-[140px]"
+        >
+          <Resume/>
+        </div>
+
+        <Lets/>
+
+        <div
+          ref={sectionRef}
+          style={{ lineHeight: 0, borderRadius: "45px" }}
+          className=" Contact bg-black next-line-section-saurabh h-[80vh] origin-center will-change-transform mt-[20px] mb-[140px]"
+        >
+          <Contact/>
+        </div>
+
+
       </div>
     </SmoothScroll>
   );

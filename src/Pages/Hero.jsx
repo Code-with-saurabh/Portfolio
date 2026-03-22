@@ -53,7 +53,7 @@ const Hero = () => {
 
             <div className="px-3">
               <h1
-                className="hero-title flex flex-col gap-12 uppercase font-normal banner-text-responsive text-[5rem] sm:text-[3rem] md:text-[10rem] sm:gap-16 md:block pb-5 text-black"
+                className="hero-title flex flex-col gap-12 uppercase font-normal banner-text-responsive text-[5rem] sm:text-[3rem] md:text-[7rem] sm:gap-16 md:block pb-5 text-black"
                 aria-label="Saurabh Sharma"
               >
                 <span>Saurabh</span>
