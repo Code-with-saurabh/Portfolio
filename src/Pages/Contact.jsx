@@ -110,7 +110,7 @@ function Contact() {
             You Dream It, I Code It
           </p>
 
-          <h1 className="uppercase text-[clamp(3rem,10vw,9rem)] leading-none">
+          <h1 className="uppercase text-[clamp(2.5rem,7vw,5rem)] leading-none">
             CONTACT
           </h1>
         </div>
@@ -119,7 +119,7 @@ function Contact() {
         <div className="relative px-10 mt-10">
           <div className="absolute inset-x-0 top-0 h-[2px] bg-white/70"></div>
 
-          <div className="py-12 text-right max-w-3xl ml-auto font-light uppercase text-[2rem] leading-relaxed">
+          <div className="py-12 text-right max-w-3xl ml-auto font-light uppercase text-[1.5rem] leading-relaxed">
             <p>Got a question or project idea?</p>
             <p>We’d love to hear from you and discuss further!</p>
           </div>
