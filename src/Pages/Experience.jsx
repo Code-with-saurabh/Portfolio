@@ -7,16 +7,16 @@ gsap.registerPlugin(ScrollTrigger);
 const Experience = () => {
   const experiences = [
     {
-      role: "Full Stack Developer",
-      company: "Freelance / Self-employed",
-      duration: "2023 - Present",
-      desc: "Building scalable MERN stack applications, optimizing performance, and delivering production-ready solutions.",
+      role: "Senior Faculty",
+      company: "Easy Skill Career Academy",
+      duration: "2025 - Present",
+      desc: "Developed responsive UI, improved UX, and integrated APIs using React and modern tools.",
     },
     {
-      role: "Frontend Developer",
-      company: "Client Projects",
-      duration: "2022 - 2023",
-      desc: "Developed responsive UI, improved UX, and integrated APIs using React and modern tools.",
+      role: "Full Stack Developer",
+      company: "Rainbow Services",
+      duration: "2023-2024",
+      desc: "Building scalable MERN stack applications, optimizing performance, and delivering production-ready solutions.",
     },
   ];
 

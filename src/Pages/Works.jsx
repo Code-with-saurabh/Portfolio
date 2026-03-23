@@ -76,7 +76,7 @@ const Works = () => {
       {/* HEADER */}
       <header>
         <div className="flex flex-col gap-12 pt-16 sm:gap-16">
-          <p className="tracking-[0.5rem] uppercase px-10 text-black text-sm font-light reveal">
+          <p className="tracking-[0.5rem] uppercase  px-4 text-black text-md font-light reveal mb-[-55px] lg:text-1xl">
             Logic meets Aesthetics, Seamlessly
           </p>
 
