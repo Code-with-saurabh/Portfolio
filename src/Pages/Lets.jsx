@@ -63,7 +63,7 @@ function Lets() {
   }, []);
 
   return (
-    <section className="flex flex-col items-center justify-between min-h-screen gap-12 mt-45 text-[2rem]">
+    <section className="flex flex-col items-center justify-between min-h-screen gap-12 py-20 gap-12 text-[2rem]">
 
       {/* 🔝 TOP MARQUEE */}
       <div className="overflow-hidden w-full h-20 md:h-[100px] flex items-center bg-black text-white uppercase">
@@ -72,10 +72,10 @@ function Lets() {
             <div key={i} className="flex">
               {["Innovation", "Precision", "Trust", "Collaboration", "Excellence"].map((item, index) => (
                 <>
-                <span key={index} className="px-16 text-lg flex items-center">
-                  {item}     
-                </span>
-                <span>✦</span>
+                  <span key={index} className="px-16 text-lg flex items-center">
+                    {item}
+                  </span>
+                  <span>✦</span>
                 </>
               ))}
             </div>
@@ -85,7 +85,7 @@ function Lets() {
 
       {/* ✨ CENTER TEXT */}
       <div className="text-center text-3xl sm:text-5xl font-light leading-relaxed px-6">
-        <p className="text-[5rem]">
+        <p className="text-[clamp(2rem,6vw,5rem)]">
           “ Let’s build a <br />
           <span className="font-normal">memorable</span> &{" "}
           <span className="italic">inspiring</span> <br />
@@ -100,10 +100,10 @@ function Lets() {
             <div key={i} className="flex">
               {[...Array(6)].map((_, index) => (
                 <>
-                <span key={index} className="px-16 text-lg flex items-center">
-                  Contact Us 
-                </span>
-                <span>▢</span>
+                  <span key={index} className="px-16 text-lg flex items-center">
+                    Contact Us
+                  </span>
+                  <span>▢</span>
                 </>
               ))}
             </div>

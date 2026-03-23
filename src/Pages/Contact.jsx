@@ -10,28 +10,28 @@ function Contact() {
 
 
   const socialLinks = [
-  {
-    name: "LinkedIn",
-    url: "https://www.linkedin.com/in/saurabh-sharma-64643128b",
-  },
-  {
-    name: "GitHub",
-    url: "https://github.com/Code-with-saurabh",
-  },
-  {
-    name: "WhatsApp",
-    url: "https://wa.me/919327115687",
-  },
-  {
-    name: "Instagram",
-    url: "https://www.instagram.com/_mr_sharma__16",
-  },
-  {
-    name: "Twitter",
-    url: "https://x.com/Mr_Saurabh_16",
-  },
-   
-];
+    {
+      name: "LinkedIn",
+      url: "https://www.linkedin.com/in/saurabh-sharma-64643128b",
+    },
+    {
+      name: "GitHub",
+      url: "https://github.com/Code-with-saurabh",
+    },
+    {
+      name: "WhatsApp",
+      url: "https://wa.me/919327115687",
+    },
+    {
+      name: "Instagram",
+      url: "https://www.instagram.com/_mr_sharma__16",
+    },
+    {
+      name: "Twitter",
+      url: "https://x.com/Mr_Saurabh_16",
+    },
+
+  ];
 
   useEffect(() => {
     // 🔹 SECTION REVEAL
@@ -110,7 +110,7 @@ function Contact() {
             You Dream It, I Code It
           </p>
 
-          <h1 className="uppercase text-5xl sm:text-7xl md:text-[9rem] leading-none">
+          <h1 className="uppercase text-[clamp(3rem,10vw,9rem)] leading-none">
             CONTACT
           </h1>
         </div>
@@ -150,18 +150,18 @@ function Contact() {
               <div className="h-px my-2 bg-white/30 "></div>
 
               <div className="flex flex-wrap gap-3 text-sm md:text-base">
-  {socialLinks.map((item, i) => (
-    <a
-      key={i}
-      href={item.url}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="hover:text-white/70 transition"
-    >
-      {"{ " + item.name + " }"}
-    </a>
-  ))}
-</div>
+                {socialLinks.map((item, i) => (
+                  <a
+                    key={i}
+                    href={item.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-white/70 transition"
+                  >
+                    {"{ " + item.name + " }"}
+                  </a>
+                ))}
+              </div>
             </div>
 
           </div>
@@ -175,10 +175,10 @@ function Contact() {
             <div key={i} className="flex">
               {[...Array(6)].map((_, j) => (
                 <>
-                  <span key={j} className="px-16 text-[3rem] flex items-center">
+                  <span key={j} className="px-16 text-[clamp(1rem,2vw,2rem)] flex items-center">
                     just imagine, I code
                   </span>
-                  <span className="px-16 text-[3rem] flex items-center" >✦</span>
+                  <span className="px-16 text-[clamp(1rem,2vw,2rem)] flex items-center" >✦</span>
                 </>
               ))}
             </div>

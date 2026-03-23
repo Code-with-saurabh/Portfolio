@@ -7,7 +7,7 @@ const Hero = () => {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      
+
       // Animate heading
       gsap.from(".hero-title span", {
         y: 100,
@@ -43,20 +43,20 @@ const Hero = () => {
   return (
     <section ref={heroRef} id="home" className="flex flex-col justify-end  h-[100vh]">
       <header>
-        
+
         <div className="[clip-path:polygon(0_0,100%_0,100%_100%,0_100%)]">
-          <div className="flex flex-col justify-center gap-12 pt-16 sm:gap-16">
-            
-            <p className="tracking-[0.5rem] uppercase px-10 text-black text-sm sm:text-base md:text-lg lg:text-xl font-medium">
+          <div className="flex flex-col justify-center gap-5 pt-16 sm:gap-16">
+
+            <p className="tracking-[0.5rem] uppercase px-10 text-black text-sm sm:text-base md:text-lg lg:text-xl font-medium mb-[-20px] lg:mb-[-60px] ms-[-24px]">
               Full Stack MERN Developer
             </p>
 
             <div className="px-3">
               <h1
-                className="hero-title flex flex-col gap-12 uppercase font-normal banner-text-responsive text-[5rem] sm:text-[3rem] md:text-[7rem] sm:gap-16 md:block pb-5 text-black"
+                className="hero-title flex flex-col gap-12 uppercase font-normal banner-text-responsive text-[3rem] sm:text-[3rem] md:text-[7rem] sm:gap-16 md:block pb-5 text-black"
                 aria-label="Saurabh Sharma"
               >
-                <span>Saurabh</span>
+                <span className="mb-[-50px]">Saurabh</span>
                 <span> Sharma</span>
               </h1>
             </div>
@@ -64,13 +64,13 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="relative px-10 text-black text-[1.5rem]">
-          
+        <div className="relative px-10 text-black text-[1.2rem] lg:text-[1.5rem]">
+
           <div className="hero-line absolute inset-x-0 border-t-2"></div>
 
           <div className="py-12 sm:py-16 text-end">
             <div className="hero-subtext font-light uppercase value-text-responsive text-black">
-              
+
               <span className="block leading-relaxed tracking-wide text-pretty">
                 Building Premium Scalable SaaS Platforms &amp;
               </span>
@@ -89,7 +89,7 @@ const Hero = () => {
         </div>
 
       </header>
-  
+
     </section>
   );
 };
