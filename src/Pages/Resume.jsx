@@ -121,7 +121,7 @@ function Resume() {
         className="flex flex-col sm:flex-row items-center justify-center gap-6 mt-10 px-10"
       >
         <a
-          href="https://wrcoiavqijnltexejxob.supabase.co/storage/v1/object/public/resume/Jayesh%20Patil.pdf"
+          href="https://drive.google.com/file/d/1mYIslONti-t0UO6zHGJe1lGeLauXuaW9/view"
           target="_blank"
           rel="noopener noreferrer"
           className="px-8 py-4 uppercase tracking-widest border border-white rounded-full hover:bg-white hover:text-black transition-all duration-300 w-full sm:w-auto text-center"
@@ -130,7 +130,7 @@ function Resume() {
         </a>
 
         <a
-          href="https://wrcoiavqijnltexejxob.supabase.co/storage/v1/object/public/resume/Jayesh%20Patil.pdf"
+          href="./Saurabh Sharma Resume.pdf"
           download
           className="px-8 py-4 uppercase tracking-widest bg-white text-black rounded-full hover:bg-yellow-500 transition-all duration-300 w-full sm:w-auto text-center"
         >
