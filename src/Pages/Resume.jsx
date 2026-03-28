@@ -130,7 +130,7 @@ function Resume() {
         </a>
 
         <a
-          href="./Saurabh Sharma Resume.pdf"
+          href="./SAURABH SHARMA_Resume.pdf"
           download
           className="px-8 py-4 uppercase tracking-widest bg-white text-black rounded-full hover:bg-yellow-500 transition-all duration-300 w-full sm:w-auto text-center"
         >
