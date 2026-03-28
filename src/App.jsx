@@ -11,6 +11,7 @@ import Works from "./Pages/Works";
 import Resume from "./Pages/Resume";
 import Lets from "./Pages/Lets";
 import Contact from "./Pages/Contact";
+import Navbar from "./Components/Navbar.jsx";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -69,6 +70,7 @@ const App = () => {
 
   return (
     <SmoothScroll>
+      <Navbar/>
       <div className="main bg-[#d6d6d6] min-h-[200vh]">
         <Hero />
 
