@@ -5,6 +5,7 @@ const NavBar = () => {
     const [open, setOpen] = useState(false);
     const menuRef = useRef(null);
     const linksRef = useRef([]);
+    const btnRef = useRef(null);
     const tl = useRef(null);
 
     const socialLinks = [
@@ -17,21 +18,19 @@ const NavBar = () => {
 
     const links = ["home", "experience", "about", "work", "resume", "contact"];
 
-    // Initialize GSAP timeline
     useEffect(() => {
         tl.current = gsap.timeline({ paused: true });
 
         tl.current
             .to(menuRef.current, { x: 0, duration: 0.45, ease: "power3.out" }, 0)
             .fromTo(
-                linksRef.current.filter(Boolean), // filter nulls
+                linksRef.current.filter(Boolean),
                 { x: 100, opacity: 0 },
                 { x: 0, opacity: 1, stagger: 0.04, duration: 0.3, ease: "power2.out" },
                 0
             );
     }, []);
 
-    // Open/close menu
     useEffect(() => {
         if (open) {
             tl.current.play();
@@ -42,7 +41,6 @@ const NavBar = () => {
         }
     }, [open]);
 
-    // Close menu on ESC key
     useEffect(() => {
         const handleEsc = (e) => {
             if (e.key === "Escape") setOpen(false);
@@ -51,10 +49,57 @@ const NavBar = () => {
         return () => window.removeEventListener("keydown", handleEsc);
     }, []);
 
+    useEffect(() => {
+        gsap.fromTo(
+            btnRef.current,
+            { scale: 0, opacity: 0 },
+            { scale: 1, opacity: 1, duration: 0.5, ease: "back.out(1.7)" }
+        );
+    }, []);
+
+    useEffect(() => {
+        let lastScroll = 0;
+        let ticking = false;
+
+        const handleScroll = () => {
+            const currentScroll = window.scrollY;
+
+            if (Math.abs(currentScroll - lastScroll) < 20) return;
+
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    if (currentScroll > lastScroll && currentScroll > 80) {
+                        gsap.to(btnRef.current, {
+                            scale: 0,
+                            opacity: 0,
+                            duration: 0.6,
+                            ease: "power3.out",
+                        });
+                    } else {
+                        gsap.to(btnRef.current, {
+                            scale: 1,
+                            opacity: 1,
+                            duration: 0.6,
+                            ease: "power3.out",
+                        });
+                    }
+
+                    lastScroll = currentScroll;
+                    ticking = false;
+                });
+
+                ticking = true;
+            }
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
     return (
         <>
-            {/* Hamburger button */}
             <div
+                ref={btnRef}
                 onClick={() => setOpen(!open)}
                 role="button"
                 aria-label={open ? "Close menu" : "Open menu"}
@@ -71,20 +116,16 @@ const NavBar = () => {
                 />
             </div>
 
-            {/* Overlay */}
             <div
                 onClick={() => setOpen(false)}
                 className={`fixed inset-0 bg-black/40 z-40 transition-all duration-300 ${open ? "opacity-100 visible" : "opacity-0 invisible"
                     }`}
-                aria-hidden="true"
             />
 
-            {/* Menu */}
             <nav
                 ref={menuRef}
                 className="fixed top-0 right-0 h-full w-full md:w-1/2 bg-black z-50 px-10 py-24 flex flex-col justify-between translate-x-full"
             >
-                {/* Menu links */}
                 <div className="flex flex-col gap-y-6">
                     {links.map((item, i) => {
                         const isResume = item === "resume";
@@ -105,7 +146,6 @@ const NavBar = () => {
                     })}
                 </div>
 
-                {/* Contact & social */}
                 <div className="flex flex-col gap-8 md:flex-row md:justify-between">
                     <div className="font-light">
                         <p className="tracking-widest text-white/40 uppercase text-sm">
