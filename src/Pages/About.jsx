@@ -82,7 +82,7 @@ const About = () => {
         {/* IMAGE */}
         <div className="w-full lg:w-[400px] flex justify-center reveal">
           <img
-            src="/images/Saurabh-Sharma.jpg"
+            src="/Saurabh.png"
             alt="profile"
             className="rounded-3xl w-[300px] md:w-[400px] object-cover"
           />
