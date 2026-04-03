@@ -17,50 +17,98 @@ gsap.registerPlugin(ScrollTrigger);
 
 const App = () => {
   const sectionRef = useRef(null);
-
+  const sectionRef1 = useRef(null);
+  const sectionRef2 = useRef(null);
+  const sectionRef3 = useRef(null);
   useEffect(() => {
-    const el = sectionRef.current;
+    const sections = [
+      sectionRef1.current,
+      sectionRef2.current,
+      sectionRef3.current,
+    ];
+    // const el = sectionRef.current;
 
 
-    gsap.fromTo(
-      el,
-      {
-        scale: 1.15,
-        y: 120,
-        opacity: 0.85,
-      },
-      {
-        scale: 1,
-        y: 0,
-        opacity: 1,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: el,
-          start: "top 85%",
-          end: "top 30%",
-          scrub: true,
+    // gsap.fromTo(
+    //   el,
+    //   {
+    //     scale: 1.15,
+    //     y: 120,
+    //     opacity: 0.85,
+    //   },
+    //   {
+    //     scale: 1,
+    //     y: 0,
+    //     opacity: 1,
+    //     ease: "power3.out",
+    //     scrollTrigger: {
+    //       trigger: el,
+    //       start: "top 85%",
+    //       end: "top 30%",
+    //       scrub: true,
+    //     },
+    //   }
+    // );
+
+
+    // gsap.fromTo(
+    //   el,
+    //   {
+    //     scale: 1.1,
+    //   },
+    //   {
+    //     scale: 0.95,
+    //     ease: "none",
+    //     scrollTrigger: {
+    //       trigger: el,
+    //       start: "top 70%",
+    //       end: "bottom 0%",
+    //       scrub: true,
+    //     },
+    //   }
+    // );
+
+    sections.forEach((el) => {
+      if (!el) return;
+
+      // First animation
+      gsap.fromTo(
+        el,
+        {
+          scale: 1.15,
+          y: 120,
+          opacity: 0.85,
         },
-      }
-    );
+        {
+          scale: 1,
+          y: 0,
+          opacity: 1,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: el,
+            start: "top 85%",
+            end: "top 30%",
+            scrub: true,
+          },
+        }
+      );
 
-
-    gsap.fromTo(
-      el,
-      {
-        scale: 1.1,
-      },
-      {
-        scale: 0.95,
-        ease: "none",
-        scrollTrigger: {
-          trigger: el,
-          start: "top 70%",
-          end: "bottom 0%",
-          scrub: true,
-        },
-      }
-    );
-
+      // Second animation
+      gsap.fromTo(
+        el,
+        { scale: 1.1 },
+        {
+          scale: 0.95,
+          ease: "none",
+          scrollTrigger: {
+            trigger: el,
+            start: "top 70%",
+            end: "bottom 0%",
+            scrub: true,
+          },
+        }
+      );
+    });
 
 
     ScrollTrigger.refresh();
@@ -70,7 +118,7 @@ const App = () => {
 
   return (
     <SmoothScroll>
-      <Navbar/>
+      <Navbar />
       <div className="main bg-[#d6d6d6] min-h-[200vh]">
         <Hero />
 
@@ -99,17 +147,17 @@ const App = () => {
           style={{ lineHeight: 0, borderRadius: "45px" }}
           className=" Resume bg-black next-line-section-saurabh h-[80vh] origin-center will-change-transform mt-[20px] mb-[140px]"
         >
-          <Resume/>
+          <Resume />
         </div>
 
-        <Lets/>
+        <Lets />
 
         <div
           ref={sectionRef}
           style={{ lineHeight: 0, borderRadius: "45px" }}
           className=" Contact bg-black next-line-section-saurabh h-[80vh] origin-center will-change-transform mt-[20px] mb-[140px]"
         >
-          <Contact/>
+          <Contact />
         </div>
 
 
