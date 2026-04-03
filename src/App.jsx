@@ -126,6 +126,7 @@ const App = () => {
 
 
         <div
+          id="experience"
           ref={sectionRef}
           style={{ lineHeight: 0, borderRadius: "45px" }}
           className="bg-black next-line-section-saurabh h-full origin-center will-change-transform"
@@ -133,6 +134,7 @@ const App = () => {
           <Experience />
 
           <div
+            id="about"
             className="lineee h-[2px] w-full bg-[#ffffffdb]"
             style={{ borderRadius: "20px" }}
           ></div>
