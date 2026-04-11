@@ -121,7 +121,7 @@ function Resume() {
         className="flex flex-col sm:flex-row items-center justify-center gap-6 mt-10 px-10"
       >
         <a
-          href="https://drive.google.com/file/d/1F0-HRwuPkxQ70ro3VkQag492RZBxixPg/view"
+          href="https://drive.google.com/file/d/1ZT5KAkX83n9b6P7uAWHNMMgvykX0FDZa/view"
           target="_blank"
           rel="noopener noreferrer"
           className="px-8 py-4 uppercase tracking-widest border border-white rounded-full hover:bg-white hover:text-black transition-all duration-300 w-full sm:w-auto text-center"
