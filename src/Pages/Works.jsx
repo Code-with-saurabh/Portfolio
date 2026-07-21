@@ -70,7 +70,7 @@ const Works = () => {
   return (
     <section
       id="work"
-      className="flex flex-col min-h-screen"
+      className=" overflow-x-hidden flex flex-col min-h-screen"
       ref={containerRef}
     >
       {/* HEADER */}
