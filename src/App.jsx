@@ -114,16 +114,16 @@ const App = () => {
     ScrollTrigger.refresh();
 
   }, []);
-useEffect(()=>{
+// useEffect(()=>{
   
-  [...document.querySelectorAll("*")].forEach(el => {
-  const rect = el.getBoundingClientRect();
+//   [...document.querySelectorAll("*")].forEach(el => {
+//   const rect = el.getBoundingClientRect();
 
-  if (rect.right > window.innerWidth || rect.left < 0) {
-    console.log(el, rect);
-  }
-});
-},[])
+//   if (rect.right > window.innerWidth || rect.left < 0) {
+//     console.log(el, rect);
+//   }
+// });
+// },[])
 
 
   return (
