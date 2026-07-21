@@ -148,10 +148,10 @@ const NavBar = () => {
                     open ? "opacity-100 visible" : "opacity-0 invisible"
                 }`}
             />
- <nav
-    ref={menuRef}
-    className="fixed top-0 right-0 h-full w-[85%] max-w-[420px] md:w-1/2 bg-black z-50 px-5 md:px-10 py-24 flex flex-col justify-between translate-x-full overflow-y-auto overflow-x-hidden"
->
+    <nav
+                ref={menuRef}
+                className="fixed top-0 right-0 h-full w-full md:w-1/2 bg-black z-50 px-5 md:px-10 py-24 flex flex-col justify-between translate-x-full overflow-y-auto overflow-x-hidden"
+            >
                 <div className="flex flex-col gap-y-6">
                     {links.map((item, i) => {
                         const isResume = item === "resume";
