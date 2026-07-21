@@ -1,8 +1,13 @@
 @import "tailwindcss";
 
  
-body,{
+html,body,{
     overflow-x:hidden;
     width:100%;
 }
  
+#root {
+  overflow-x: hidden;
+  width: 100%;
+  transform: translateZ(0);  
+}
