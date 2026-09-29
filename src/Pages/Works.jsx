@@ -21,6 +21,20 @@ const Works = () => {
       tech: ["React", "Nodejs", "Express", "JavaScript", "socketjs"],
       image: "/images/chat.png",
     },
+    {
+      title: "SlotSync",
+      link: "https://slotsync-easyskill.netlify.app/",
+      github: "https://github.com/Code-with-saurabh/SlotSync",
+      tech: ["React.js", "Node.js", "Express", "MongoDB", "SSE"],
+      image: "/images/SlotSync.png",
+    },
+    {
+      title: "Typing Arena",
+      link: "https://typing-arena-play.netlify.app/",
+      github: "https://github.com/Code-with-saurabh/Typing-Arena",
+      tech: ["React.js", "Node.js", "Socket.io", "Vite"],
+      image: "/images/Typing-arena-play.png",
+    },
   ];
 
   // Lenis Smooth Scroll
@@ -70,7 +84,7 @@ const Works = () => {
   return (
     <section
       id="work"
-      className=" overflow-x-hidden flex flex-col min-h-screen"
+      className=" overflow-x-clip flex flex-col min-h-screen"
       ref={containerRef}
     >
       {/* HEADER */}
@@ -138,6 +152,19 @@ const Works = () => {
                   {tech}
                 </p>
               ))}
+
+              {project.github && (
+                <span
+                  onClick={(e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    window.open(project.github, "_blank", "noopener,noreferrer");
+                  }}
+                  className="group-hover:text-white transition cursor-pointer"
+                >
+                  GitHub ↗
+                </span>
+              )}
             </div>
 
             {/* Image (Mobile) */}
