@@ -22,18 +22,18 @@ const Works = () => {
       image: "/images/chat.png",
     },
     {
-      title: "SlotSync",
-      link: "https://slotsync-easyskill.netlify.app/",
-      github: "https://github.com/Code-with-saurabh/SlotSync",
-      tech: ["React.js", "Node.js", "Express", "MongoDB", "SSE"],
-      image: "/images/SlotSync.png",
-    },
-    {
       title: "Typing Arena",
       link: "https://typing-arena-play.netlify.app/",
       github: "https://github.com/Code-with-saurabh/Typing-Arena",
       tech: ["React.js", "Node.js", "Socket.io", "Vite"],
       image: "/images/Typing-arena-play.png",
+    },
+    {
+      title: "SlotSync",
+      link: "https://slotsync-easyskill.netlify.app/",
+      github: "https://github.com/Code-with-saurabh/SlotSync",
+      tech: ["React.js", "Node.js", "Express", "MongoDB", "SSE"],
+      image: "/images/SlotSync.png",
     },
   ];
 
