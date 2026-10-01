@@ -1,29 +1,10 @@
 import React, { useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Lenis from "@studio-freight/lenis";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const About = () => {
-  // Lenis Smooth Scroll
-  useEffect(() => {
-    const lenis = new Lenis({
-      smooth: true,
-    });
-
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-
-    requestAnimationFrame(raf);
-
-    return () => {
-      lenis.destroy();
-    };
-  }, []);
-
   //GSAP Reveal Animation
   useEffect(() => {
     const elements = gsap.utils.toArray(".reveal");

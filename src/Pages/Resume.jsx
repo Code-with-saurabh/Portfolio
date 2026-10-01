@@ -96,7 +96,7 @@ function Resume() {
 
         <h1
           ref={titleRef}
-          className="uppercase font-semibold text-[4rem] sm:text-[6rem] md:text-[10rem] leading-none"
+          className="uppercase font-semibold text-[clamp(2.75rem,13vw,4rem)] sm:text-[6rem] md:text-[10rem] leading-none"
         >
           RESUME
         </h1>

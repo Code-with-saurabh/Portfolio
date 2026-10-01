@@ -129,7 +129,7 @@ const App = () => {
   return (
     <SmoothScroll>
       <Navbar />
-      <div className="main bg-[#d6d6d6] min-h-[200vh]">
+      <div className="main bg-[#d6d6d6] min-h-[200vh] overflow-x-clip">
         <Hero />
 
         <Services />
@@ -157,7 +157,7 @@ const App = () => {
         <div
           ref={sectionRef}
           style={{ lineHeight: 0, borderRadius: "45px" }}
-          className=" Resume bg-black next-line-section-saurabh h-[80vh] origin-center will-change-transform mt-[20px] mb-[140px]"
+          className=" Resume bg-black next-line-section-saurabh h-[80vh] max-md:h-auto origin-center will-change-transform mt-[20px] mb-[140px]"
         >
           <Resume />
         </div>
@@ -167,7 +167,7 @@ const App = () => {
         <div
           ref={sectionRef}
           style={{ lineHeight: 0, borderRadius: "45px" }}
-          className=" Contact bg-black next-line-section-saurabh h-[80vh] origin-center will-change-transform mt-[20px] mb-[140px]"
+          className=" Contact bg-black next-line-section-saurabh h-[80vh] max-md:h-auto origin-center will-change-transform mt-[20px] mb-[140px]"
         >
           <Contact />
         </div>

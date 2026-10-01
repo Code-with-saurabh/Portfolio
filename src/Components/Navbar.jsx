@@ -162,7 +162,7 @@ const NavBar = () => {
                                 ref={(el) => (linksRef.current[i] = el)}
                                 href={`#${item}`}
                                 onClick={() => setOpen(false)}
-                                className={`text-5xl sm:text-6xl md:text-7xl lg:text-[9vh] font-semibold uppercase leading-[1] transition-all duration-300 hover:translate-x-2 ${
+                                className={`text-[clamp(2rem,11vw,3rem)] sm:text-6xl md:text-7xl lg:text-[9vh] font-semibold uppercase leading-[1] transition-all duration-300 hover:translate-x-2 ${
                                     isResume
                                         ? "text-[#cfa355] hover:text-white"
                                         : "text-[#cccccc] hover:text-white"

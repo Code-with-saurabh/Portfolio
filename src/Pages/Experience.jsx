@@ -55,7 +55,7 @@ const Experience = () => {
               Professional Journey
             </p>
 
-            <h1 className="uppercase   text-[3.5rem] sm:text-[4.5rem] md:text-[6.5rem] leading-tight reveal">
+            <h1 className="uppercase   text-[clamp(2.5rem,13vw,3.5rem)] sm:text-[4.5rem] md:text-[6.5rem] leading-tight reveal">
               Experience
             </h1>
           </div>

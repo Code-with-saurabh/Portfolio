@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Lenis from "@studio-freight/lenis";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -36,24 +35,6 @@ const Works = () => {
       image: "/images/SlotSync.png",
     },
   ];
-
-  // Lenis Smooth Scroll
-  useEffect(() => {
-    const lenis = new Lenis({
-      smooth: true,
-    });
-
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-
-    requestAnimationFrame(raf);
-
-    return () => {
-      lenis.destroy();
-    };
-  }, []);
 
   //GSAP Scroll Animation
   useEffect(() => {
@@ -177,7 +158,7 @@ const Works = () => {
               <img
                 src={project.image}
                 alt="preview"
-                className="absolute px-10 rounded-xl"
+                className="absolute left-10 w-[calc(100%-5rem)] rounded-xl object-cover"
               />
             </div>
 
