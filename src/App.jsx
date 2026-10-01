@@ -167,7 +167,7 @@ const App = () => {
         <div
           ref={sectionRef}
           style={{ lineHeight: 0, borderRadius: "45px" }}
-          className=" Contact bg-black next-line-section-saurabh h-[80vh] max-md:h-auto origin-center will-change-transform mt-[20px] mb-[140px]"
+          className=" Contact bg-black next-line-section-saurabh h-[80vh] max-md:h-auto origin-center will-change-transform mt-[20px] mb-[140px] max-md:mb-0"
         >
           <Contact />
         </div>
